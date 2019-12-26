@@ -6,13 +6,13 @@ on:
     - cron: '0 21 * * *'
 
 jobs:
-  bot:
+  bot_shenzhen:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Get Result'
-        run: bash ./weather.sh
+        run: bash ./weather.sh Shenzhen
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
@@ -23,5 +23,24 @@ jobs:
           subject: Shanghai Weather Report
           body: file://result.html
           to: xiaoxm.ok@foxmail.com
+          from: GitHub Actions
+          content_type: text/html
+  bot_beijing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'Get Result'
+        run: bash ./weather.sh Beijing
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Shanghai Weather Report
+          body: file://result.html
+          to: 1106130332@qq.com
           from: GitHub Actions
           content_type: text/html
