@@ -20,7 +20,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Shanghai Weather Report
+          subject: Shenzhen Weather Report
           body: file://result.html
           to: xiaoxm.ok@foxmail.com
           from: GitHub Actions
@@ -39,7 +39,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Shanghai Weather Report
+          subject: Beijing Weather Report
           body: file://result.html
           to: 1106130332@qq.com
           from: GitHub Actions
