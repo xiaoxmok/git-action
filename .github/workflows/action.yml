@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Shenzhen Weather Report
-          body: file://result.html
+          body: file://result_Shenzhen.html
           to: xiaoxm.ok@foxmail.com
           from: GitHub Actions
           content_type: text/html
@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Beijing Weather Report
-          body: file://result.html
+          body: file://result_Beijing.html
           to: 1106130332@qq.com
           from: GitHub Actions
           content_type: text/html
