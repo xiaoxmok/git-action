@@ -25,22 +25,22 @@ jobs:
           to: xiaoxm.ok@foxmail.com
           from: GitHub Actions
           content_type: text/html
-  bot_beijing:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Checkout codes'
-        uses: actions/checkout@v1
-      - name: 'Get Result'
-        run: bash ./weather.sh Beijing
-      - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
-        with:
-          server_address: smtp.163.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Beijing Weather Report
-          body: file://result_Beijing.html
-          to: 1106130332@qq.com
-          from: GitHub Actions
-          content_type: text/html
+  # bot_beijing:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 'Checkout codes'
+  #       uses: actions/checkout@v1
+  #     - name: 'Get Result'
+  #       run: bash ./weather.sh Beijing
+  #     - name: 'Send mail'
+  #       uses: dawidd6/action-send-mail@master
+  #       with:
+  #         server_address: smtp.163.com
+  #         server_port: 465
+  #         username: ${{ secrets.MAIL_USERNAME }}
+  #         password: ${{ secrets.MAIL_PASSWORD }}
+  #         subject: Beijing Weather Report
+  #         body: file://result_Beijing.html
+  #         to: 1106130332@qq.com
+  #         from: GitHub Actions
+  #         content_type: text/html
